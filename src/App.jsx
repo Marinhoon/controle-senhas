@@ -56,7 +56,7 @@ const App = () => {
         searchValue={searchValue}
         onSearchChange={setSearchValue}
       />
-      <h1>Controle de Senha</h1>
+     <br />
       <button className="add" onClick={openModal}>Adicionar Paciente</button>
       <DataTable patients={filteredPatients} onEdit={openEditModal} />
       
