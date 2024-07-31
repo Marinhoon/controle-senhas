@@ -49,10 +49,8 @@ const DataForm = ({ addPatient, closeModal }) => {
           required
         />
       </label>
-      <button type="submit">Adicionar</button>
-      <button type="button" onClick={closeModal}>
-        Cancelar
-      </button>
+      <button className="add "type="submit">Adicionar</button>
+      <button className="close" type="button" onClick={closeModal}> Fechar</button>
     </form>
   );
 };
