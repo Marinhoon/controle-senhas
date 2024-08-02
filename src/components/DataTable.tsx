@@ -1,5 +1,6 @@
-import React from "react";
 import EditIcon from "@mui/icons-material/Edit";
+import React from "react";
+import { ListaSenhaPacienteModel } from "../model/listaSenhaPaciente.model";
 
 
 const DataTable = ({ patients, onEdit }) => {
@@ -16,12 +17,12 @@ const DataTable = ({ patients, onEdit }) => {
         </tr>
       </thead>
       <tbody>
-        {patients.map((patient) => (
+        {patients.map((patient: ListaSenhaPacienteModel) => (
           <tr key={patient.id}>
-            <td>{patient.group}</td>
-            <td>{patient.name}</td>
-            <td>{patient.password}</td>
-            <td>{patient.admission}</td>
+            <td>{patient.ala}</td>
+            <td>{patient.nomeCompleto}</td>
+            <td>{patient.senha}</td>
+            <td>{patient.dataAdmissao as string}</td>
             <td>
               <div className="icon-container">
                 <button className="edit-button" onClick={() => onEdit(patient)}>
