@@ -7,7 +7,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
-import { initialPatients2 } from "../../listaPacienteData";
+import { initialPatients } from "../../listaPacienteData";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDPj7kWZaWsFG2rzVoGBYijxM-9Qv7cyIs",
@@ -30,7 +30,7 @@ export const useControleDeSenhaService = () => {
       const query_historico = query(senhaCollection);
       const querySnapshot = await getDocs(query_historico);
 
-      // initialPatients2.forEach(async(obj) => {
+      // initialPatients.forEach(async(obj) => {
       //   const docRef = await addDoc(collection(db_firebase,"controle-de-senha" ),obj);
       //   console.log("Pacientes Adicionado!", docRef.id)
       // })
